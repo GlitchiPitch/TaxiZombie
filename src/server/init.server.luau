@@ -40,7 +40,11 @@ function setupZombie()
 end
 
 function spawnZombies()
-	while task.wait(math.random(5)) do setupZombie()	end
+	while task.wait(math.random(5)) do 
+        if #workspace.Zombies < 50 then
+            setupZombie()
+        end
+    end
 end
 
 function onPlayerAdded(player:Player)
