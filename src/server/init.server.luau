@@ -41,7 +41,7 @@ end
 
 function spawnZombies()
 	while task.wait(math.random(5)) do 
-        if #workspace.Zombies < 50 then
+        if #workspace.Zombies:GetChildren() < 50 then
             setupZombie()
         end
     end
